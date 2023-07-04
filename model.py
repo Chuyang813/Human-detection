@@ -15,8 +15,7 @@ EPOCHS = 10
 input_shape = (IMG_HEIGHT, IMG_WIDTH, 3)  # 3 表示 RGB颜色通道
 
 # 设定图片的存放路径
-data_dir_no_people = 'C:/Users/lcy08/Desktop/1/data/0'
-data_dir_people = 'C:/Users/lcy08/Desktop/1/data/1'  
+
 
 print("build model...")
 
@@ -41,7 +40,7 @@ model = Sequential([
 # 编译模型
 model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
-data_dir = r'C:\Users\lcy08\Desktop\1\data'
+data_dir = r'C:\Users\lcy08\Desktop\1\Human-detection\data'
 # 使用ImageDataGenerator来读取和预处理图片
 train_datagen = ImageDataGenerator(
     rescale=1. / 255,
