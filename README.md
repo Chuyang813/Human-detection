@@ -1,49 +1,50 @@
-# 人物检测模型
+# Human Detection Model
 
-本项目包含一个使用 Keras 框架构建的卷积神经网络 (CNN) 模型，用于实时检测摄像头捕获的视频流中是否有人物。
+This project contains a convolutional neural network (CNN) model built using the Keras framework, which is used for real-time human detection in video streams captured by a camera.
 
-## 安装
+## Installation
 
-首先，确保已经安装了以下库：
+Firstly, make sure you have the following libraries installed:
 
 - OpenCV
 - Tensorflow
 - Keras
 
-如果尚未安装，可以使用 pip 进行安装：
+If you haven't installed them, you can install them using pip:
 
 ```bash
 pip install opencv-python tensorflow keras
 ```
 
-此外，您还需要安装一个适合您的操作系统的 [Python](https://www.python.org/) 版本。
+In addition, you need to install a version of [Python](https://www.python.org/) suitable for your operating system.
 
-## 使用
+## Usage
 
-在开始之前，请确保你已经有一个预训练好的模型文件。如果你没有，你可以使用 `train.py` 脚本来训练模型。训练数据应该放在 `data` 文件夹下，其中 `1` 代表有人的图像，`0` 代表没有人的图像。
+Before you start, make sure you have a pre-trained model file. If you don't, you can use the `train.py` script to train the model. The training data should be placed under the `data` folder, where `1` represents images with humans and `0` represents images without humans.
 
-运行 `model.py` 脚本来训练模型。训练结束后，模型会被保存为 `model.h5`。
+Run the `model.py` script to train the model. After the training is over, the model will be saved as `model.h5`.
 
 ```bash
 python model.py
 ```
 
-之后，你可以使用 `test.py` 来运行人物检测。
+Then, you can use `test.py` to run the human detection.
 
 ```bash
 python test.py
 ```
 
-该脚本会打开默认摄像头并在新的窗口中显示摄像头捕获的视频流。预测的结果会以文本的形式显示在每一帧上。
+The script will open the default camera and display the video stream captured by the camera in a new window. The prediction results will be displayed as text on each frame.
 
-按 'q' 键退出。
+Press 'q' to quit.
 
-## 注意事项
+## Note
 
-本项目的模型是一个二元分类模型，而非对象检测模型。它并不能准确的定位视频中人的位置，只能预测视频中是否有人。
+The model of this project is a binary classification model, not an object detection model. It cannot accurately locate humans in the video but can predict whether there are humans in the video.
 
-此外，由于模型的性能受限于训练数据的质量和数量，其预测的准确性可能会受到影响。在训练模型时，尽可能提供多样化并且充足的训练数据。
+Moreover, the performance of the model is limited by the quality and quantity of the training data, so its prediction accuracy may be affected. Try to provide diversified and sufficient training data when training the model.
 
-## 免责声明
+## Disclaimer
 
-本项目仅供学习和研究使用，不得用于任何非法用途。使用者对使用本项目产生的任何后果负全部责任。
+This project is for learning and research purposes only and must not be used for any illegal purposes. The user is fully responsible for any consequences resulting from the use of this project.
+
