@@ -29,11 +29,11 @@ model = Sequential([
     MaxPooling2D((2, 2)),
     Conv2D(256, (3, 3), activation='relu'),
     MaxPooling2D((2, 2)),
+    Conv2D(512, (3, 3), activation='relu'),
+    Dropout(0.5),
     Flatten(),
-    Dense(256, activation='relu'),
-    Dense(128, activation='relu'),
-    Dense(64, activation='relu'),
-    Dense(32, activation='relu'),
+    Dense(512, activation='relu'),
+    Dropout(0.5),
     Dense(1, activation='sigmoid')  # 二分类，所以用sigmoid激活函数
 ])
 
